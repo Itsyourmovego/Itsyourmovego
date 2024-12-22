@@ -1,10 +1,114 @@
-- 👋 Hi, I’m James Norman
-- 👀 I’m interested in Mobile App Development
-- 🌱 I’m currently learning through Coursera
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me- normancommajames@gmail.com
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Norman's GitHub Homepage</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #f0f0f0, #c9c9c9); 
+        }
 
-<!---
-Itsyourmovego/Itsyourmovego is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            opacity: 0; 
+            animation: fadeInUp 1s ease-in-out forwards; 
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 2rem;
+        }
+
+        img {
+            border-radius: 50%;
+            max-width: 150px;
+            margin-bottom: 20px;
+            border: 4px solid #3498db; 
+            animation: spin 2s linear infinite; 
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        p, a {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👋 Hi, I’m James Norman</h1>
+        <img src=https://avatars.githubusercontent.com/u/176633976?v=4" alt="James Norman Profile Picture"> 
+        <p>👀 I’m interested in Mobile App Development</p>
+        <p>🌱 I’m currently learning through Coursera</p>
+        <p>📫 How to reach me: <a href="mailto:normancommajames@gmail.com">normancommajames@gmail.com</a></p>
+    </div>
+
+    <script>
+        // Simple animation (container fade-in and slide-up)
+        const container = document.querySelector('.container');
+        container.style.opacity = '0';
+        setTimeout(() => {
+            container.style.opacity = '1';
+            container.style.transform = 'translateY(0)'; 
+        }, 100); 
+
+        // Hover effect for the GitHub link
+        const githubLink = document.querySelector('a');
+        githubLink.addEventListener('mouseenter', () => {
+            githubLink.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.2)'; 
+        });
+
+        githubLink.addEventListener('mouseleave', () => {
+            githubLink.style.boxShadow = 'none'; 
+        });
+    </script>
+</body>
+</html>
